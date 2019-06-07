@@ -65,25 +65,25 @@ public class LoginlPage {
         Reporter.log("Pressed submit button" , true);
     }
 
-    //We will use this boolean for assertion. To check if page is opened
+    //We will use this boolean for assertion. To check if page opened
     public boolean isPageOpened() {
         Reporter.log("Page is open" , true);
         return loginPageText.getText().contains("אני לקוח קיים");
     }
 
-    //We will use this boolean for assertion. To check if page is opened
+    //We will use this boolean for assertion. To check if page opened
     public boolean isForgetPassWizardOpen() {
         return forgetPassWizard.getText().contains((" איפוס סיסמה"));
     }
 
-    //We will use this boolean for assertion. To check if page is opened
+    //We will use this boolean for assertion. To check if page opened
     public boolean isLoginSuccessful() {
         Reporter.log("User is logged in! " , true);
         return loginConfirmed.getText().contains("לחץ כאן להתנתקות והתחברות עם משתמש אחר");
 
     }
 
-    //We will use this boolean for assertion. To check if page is opened
+    //We will use this boolean for assertion. To check if page opened
     public boolean isLoginFailed() {
         Reporter.log("Wrong credentials!, login failed" , true);
         return loginFailedMessage.getText().contains("שגיאת התחברות!");
