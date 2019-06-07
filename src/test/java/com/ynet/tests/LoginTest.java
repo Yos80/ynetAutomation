@@ -25,7 +25,7 @@ public class LoginTest {
         Reporter.log("Opening browser" , true);
     }
 
-    @Test(priority = 2)
+    //@Test(priority = 2)
     public void validLogin() {
         //Create object of HomePage Class
         HomePage home = new HomePage(driver);
