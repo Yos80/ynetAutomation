@@ -35,7 +35,7 @@ public class LoginTest {
         //Create object of LoginlPage
         LoginlPage login = new LoginlPage(driver);
 
-        //Check if page is opened
+        //Check if page opened
         Assert.assertTrue(login.isPageOpened());
 
 
