@@ -2,7 +2,6 @@ package com.ynet.tests;
 
 import com.ynet.webpages.HomePage;
 import com.ynet.webpages.LoginlPage;
-import com.ynet.webpages.SignUpPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
