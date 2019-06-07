@@ -25,7 +25,7 @@ public class LoginTest {
         Reporter.log("Opening browser" , true);
     }
 
-    @Test
+    @Test(priority = 2)
     public void validLogin() {
         //Create object of HomePage Class
         HomePage home = new HomePage(driver);
@@ -47,7 +47,7 @@ public class LoginTest {
         Assert.assertTrue(login.isLoginSuccessful());
     }
 
-        @Test
+        @Test(priority = 1)
         public void inValidLogin () {
             //Create object of HomePage Class
             HomePage home = new HomePage(driver);
