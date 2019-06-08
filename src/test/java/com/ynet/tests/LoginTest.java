@@ -4,6 +4,7 @@ import com.ynet.webpages.HomePage;
 import com.ynet.webpages.LoginlPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
@@ -20,12 +21,28 @@ public class LoginTest {
     public void setup() {
         //use Chrome Driver
         driver = new ChromeDriver();
+
+        //use FF Driver
+        //driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.24.0/bin/geckoDriver.exe");
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Reporter.log("Opening browser" , true);
     }
 
-    @Test(priority = 2)
+
+    @Test(priority = 1)
+    public void buttonColorValidation() {
+
+        HomePage home = new HomePage(driver);
+        home.BtnColor("#f4a137");
+
+
+    }
+
+
+    @Test(priority = 3)
     public void validLogin() {
         //Create object of HomePage Class
         HomePage home = new HomePage(driver);
@@ -47,7 +64,7 @@ public class LoginTest {
         Assert.assertTrue(login.isLoginSuccessful());
     }
 
-        @Test(priority = 1)
+        @Test(priority = 2)
         public void inValidLogin () {
             //Create object of HomePage Class
             HomePage home = new HomePage(driver);
