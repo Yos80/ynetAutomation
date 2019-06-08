@@ -3,7 +3,6 @@ package com.ynet.webpages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -17,7 +16,7 @@ public class HomePage {
     //Locators
 
     //Login button
-    @FindBy(how = How.XPATH, using = "//*[@id=\"TabBlock-1\"]/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id=\"TabBlock-1\"]/ul/li[2]/a")
     private WebElement loginButton;
 
     //Constructor
